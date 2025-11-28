@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="google-site-verification" content="1VfIfx-nmQe3IEXgPlTPPgXhG-ZNtcAbl5PTAalTPnc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="1VfIfx-nmQe3IEXgPlTPPgXhG-ZNtcAbl5PTAalTPnc" />
 
   <title>JetLux - Private Jet Booking</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- External Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -14,7 +16,7 @@
   <header>
     <h1>JetLux</h1>
     <nav>
-      <a href="#booking">Book</a>
+      <a href="#book">Book</a>
       <a href="#fleet">Fleet</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -25,199 +27,143 @@
     <div class="hero-content">
       <h2 class="animate-fade">Fly Private. Fly Luxurious.</h2>
       <p class="animate-fade-delay">Experience the skies like never before.</p>
-      <a href="#booking" class="hero-btn animate-zoom">Book Your Jet</a>
+      <a href="#book" class="hero-btn animate-zoom">Book Your Jet</a>
     </div>
   </section>
 
-  
- <!-- Fleet Section -->
-<section id="fleet" class="fleet-section">
-  <h2>Our Elite Fleet</h2>
-  <div class="jet-cards">
-    <div class="jet-card">
-      <img src="images/jet1.jpg" alt="Gulfstream G650">
-      <h3>Gulfstream G650</h3>
-      <p>The epitome of luxury and performance. Offers transcontinental range with ultra-spacious seating for 18 passengers.</p>
+  <!-- Fleet Section -->
+  <section id="fleet" class="fleet-section">
+    <h2>Our Elite Fleet</h2>
+    <div class="jet-cards">
+      <div class="jet-card">
+        <img src="images/jet1.jpg" alt="Gulfstream G650" />
+        <h3>Gulfstream G650</h3>
+        <p>The epitome of luxury and performance. Offers transcontinental range with ultra-spacious seating for 18 passengers.</p>
+      </div>
+      <div class="jet-card">
+        <img src="images/jet2.jpg" alt="Bombardier Global 7500" />
+        <h3>Bombardier Global 7500</h3>
+        <p>Engineered for speed, style, and long-range missions. Features a private bedroom and full-sized kitchen.</p>
+      </div>
+      <div class="jet-card">
+        <img src="images/jet3.jpg" alt="Dassault Falcon 8X" />
+        <h3>Dassault Falcon 8X</h3>
+        <p>A perfect blend of efficiency and elegance. With three lounge zones, it's ideal for business and leisure travel.</p>
+      </div>
     </div>
-    <div class="jet-card">
-      <img src="images/jet2.jpg" alt="Bombardier Global 7500">
-      <h3>Bombardier Global 7500</h3>
-      <p>Engineered for speed, style, and long-range missions. Features a private bedroom and full-sized kitchen.</p>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="book" class="book-section">
+    <div class="book-card">
+      <h2>Reserve Your Private Jet</h2>
+      <p>Experience unmatched comfort, privacy, and speed. Book your luxury flight today.</p>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="date" required />
+        <button type="submit">Book Now</button>
+      </form>
     </div>
-    <div class="jet-card">
-      <img src="images/jet3.jpg" alt="Dassault Falcon 8X">
-      <h3>Dassault Falcon 8X</h3>
-      <p>A perfect blend of efficiency and elegance. With three lounge zones, it's ideal for business and leisure travel.</p>
-    </div>
+  </section>
+
+  <!-- Route Display Bar (for JS) -->
+  <div id="route-display" style="display: none; margin: 20px auto; text-align: center; font-size: 1.2rem; font-weight: bold;">
+    ✈️ <span id="from-city">From</span> → <span id="to-city">To</span>
   </div>
-</section>
 
+  <!-- Why Choose Section -->
+  <section class="why-choose">
+    <h2>Why Choose JetLux</h2>
+    <ul>
+      <li>Real-time Jet Availability</li>
+      <li>Book Full Jet or Single Seat</li>
+      <li>Transparent Pricing &amp; Instant Quotes</li>
+      <li>Worldwide Jet Access</li>
+      <li>24/7 Concierge &amp; Support</li>
+    </ul>
+  </section>
 
-<!-- Booking Section -->
-<section id="book" class="book-section">
-  <div class="book-card">
-    <h2>Reserve Your Private Jet</h2>
-    <p>Experience unmatched comfort, privacy, and speed. Book your luxury flight today.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="date" required />
-      <button type="submit">Book Now</button>
-    </form>
-  </div>
-</section>
-<!-- Route Display Bar -->
-<div id="route-display" style="display: none; margin: 20px auto; text-align: center; font-size: 1.2rem; font-weight: bold;">
-  ✈️ <span id="from-city">From</span> → <span id="to-city">To</span>
-</div>
-
-
-  
-
-  
-  <script src="script.js"></script>
-</body>
-</html>
-<section class="why-choose">
-  <h2>Why Choose JetLux</h2>
-  <ul>
-    <li>Real-time Jet Availability</li>
-    <li>Book Full Jet or Single Seat</li>
-    <li>Transparent Pricing & Instant Quotes</li>
-    <li>Worldwide Jet Access</li>
-    <li>24/7 Concierge & Support</li>
-  </ul>
-</section>
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-column">
-      <h4>Get Started</h4>
-      <ul>
-        <li><a href="#">Private Jet</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Current Jet Deals</a></li>
-        <li><a href="#">Mobile App</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Private Jet Service</h4>
-      <ul>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Ways to Fly</a></li>
-        <li><a href="#">Membership</a></li>
-        <li><a href="#">Charter</a></li>
-        <li><a href="#">Jet Cost</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Why JetLux</h4>
-      <ul>
-        <li><a href="#">JetLux Experience</a></li>
-        <li><a href="#">Fleet</a></li>
-        <li><a href="#">Aircraft Management</a></li>
-        <li><a href="#">Safety</a></li>
-        <li><a href="#">Member Benefits</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>About Us</h4>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Destinations</h4>
-      <ul>
-        <li><a href="#">Popular Countries</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Routes</a></li>
-        <li><a href="#">Airports</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>For Partners</h4>
-      <ul>
-        <li><a href="#">Partner With Us</a></li>
-        <li><a href="#">For Operators</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<!-- Contact Section -->
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Email: bookings@jetlux.com</p>
     <p>Phone: +1-800-PRIVATE</p>
   </section>
-<!-- Footer -->
-  <footer>
-<head>
-  <style>
-    .site-footer {
-      background-color: #111;
-      color: #ccc;
-      padding: 60px 20px;
-      font-family: 'Arial', sans-serif;
-    }
 
-    .footer-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  <!-- Main Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="#">Private Jet</a></li>
+          <li><a href="#">Register</a></li>
+          <li><a href="#">Current Jet Deals</a></li>
+          <li><a href="#">Mobile App</a></li>
+        </ul>
+      </div>
 
-    .footer-column {
-      flex: 1 1 200px;
-      margin: 20px;
-      min-width: 180px;
-    }
+      <div class="footer-column">
+        <h4>Private Jet Service</h4>
+        <ul>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Ways to Fly</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Charter</a></li>
+          <li><a href="#">Jet Cost</a></li>
+        </ul>
+      </div>
 
-    .footer-column h4 {
-      font-size: 1.2em;
-      margin-bottom: 15px;
-      color: gold;
-    }
+      <div class="footer-column">
+        <h4>Why JetLux</h4>
+        <ul>
+          <li><a href="#">JetLux Experience</a></li>
+          <li><a href="#">Fleet</a></li>
+          <li><a href="#">Aircraft Management</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Member Benefits</a></li>
+        </ul>
+      </div>
 
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-    }
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
 
-    .footer-column ul li {
-      margin-bottom: 10px;
-    }
+      <div class="footer-column">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#">Popular Countries</a></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Routes</a></li>
+          <li><a href="#">Airports</a></li>
+        </ul>
+      </div>
 
-    .footer-column ul li a {
-      text-decoration: none;
-      color: #aaa;
-      transition: color 0.3s ease;
-    }
+      <div class="footer-column">
+        <h4>For Partners</h4>
+        <ul>
+          <li><a href="#">Partner With Us</a></li>
+          <li><a href="#">For Operators</a></li>
+        </ul>
+      </div>
+    </div>
 
-    .footer-column ul li a:hover {
-      color: gold;
-    }
-  </style>
-</head>
-
-
-
-
-    &copy; 2025 JetLux. All rights reserved.
+    <div class="footer-bottom">
+      <p>&copy; 2025 JetLux. All rights reserved.</p>
+      <p>🚀 Built by Aryan</p>
+    </div>
   </footer>
-<footer style="text-align: center; padding: 20px; color: pink; font-weight: bold;">
-  🚀 Built by Aryan
-</footer>
 
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
 
